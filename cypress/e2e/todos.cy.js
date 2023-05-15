@@ -1,15 +1,23 @@
 ///<reference types = "cypress"/>
 
-import TodosFunctionallity from "../pages/todos.page"
+import TodosFunctionality from "../pages/todos.page"
 
-const todosPage = new TodosFunctionallity();
+const todosPage = new TodosFunctionality();
 
-
-describe('Testing basic todos functipnallity', () => {
+describe('Testing basic todos functipnality', () => {
 
     beforeEach('Go to todos page', () => {
         cy.visit("/todo")
     })
 
-    
+    it('Check the title', () => {
+        todosPage.checkTheTitle();
+        todosPage.checkTheTitle1();
+        todosPage.checkTheTitle2();
+        todosPage.checkTheTitle3();
+        todosPage.checkTheTitle4();
+        todosPage.inputNewItemAndConfirmIncrement();
+        todosPage.checkIfTheItemIsAdded();
+        todosPage.checkIfTheItemIsAdded1();
+    })
 })
